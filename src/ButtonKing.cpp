@@ -25,7 +25,7 @@ ButtonKing::ButtonKing()
 
 ButtonKing::ButtonKing(int pin, int activeLow, bool pullupActive)
 {
-  // OneButton();
+  // ButtonKing();
   _pin = pin;
 
   if (activeLow) {
@@ -44,7 +44,7 @@ ButtonKing::ButtonKing(int pin, int activeLow, bool pullupActive)
     // use the given pin as input
     pinMode(pin, INPUT);
   } // if
-} // OneButton
+} // ButtonKing
 
 
 // explicitly set the number of millisec that have to pass by before a click is
