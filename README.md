@@ -6,4 +6,6 @@ It shows how to use an digital input pin with a single pushbutton attached
 for detecting some of the typical button press events like single clicks, double clicks and long-time pressing.
 This enables you to reuse the same button for multiple functions and lowers the hardware invests.
 
-This is also a sample for implementing simple finite-state machines by using the simple pattern above.
+to use ButtonKing library
+
+[Setup Guide and Reference Manual](https://github.com/TanPitch/ButtonKing/wiki)
