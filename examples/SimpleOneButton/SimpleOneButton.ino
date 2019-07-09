@@ -30,7 +30,7 @@ void setup() {
 // main code here, to run repeatedly:
 void loop() {
   // keep watching the push button:
-  button.tick();
+  button.isClick();
 
   // You can implement other code in here or just wait a while
   delay(10);

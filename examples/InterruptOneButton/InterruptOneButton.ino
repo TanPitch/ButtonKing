@@ -36,7 +36,7 @@ void setup() {
 // This routine will only be called on any signal change on A1: exactly where we need to check.
 ISR(PCINT1_vect) {
   // keep watching the push button:
-  button.tick(); // just call tick() to check the state.
+  button.isClick(); // just call tick() to check the state.
 }
 
 

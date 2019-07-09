@@ -58,14 +58,14 @@ public:
    * @brief Call this function every some milliseconds for checking the input
    * level at the initialized digital pin.
    */
-  void tick(void);
+  void isClick(void);
 
   /**
    * @brief Call this function every time the input level has changed.
    * Using this function no digital input pin is checked because the current
    * level is given by the parameter.
    */
-  void tick(bool level);
+  void isClick(bool level);
 
   bool isLongPressed();
   int getPressedTicks();

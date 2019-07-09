@@ -55,7 +55,7 @@ void loop() {
   unsigned long now = millis();
 
   // keep watching the push button:
-  button.tick();
+  button.isClick();
 
   // You can implement other code in here or just wait a while
 

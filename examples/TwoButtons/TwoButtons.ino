@@ -86,8 +86,8 @@ void setup() {
 // main code here, to run repeatedly:
 void loop() {
   // keep watching the push buttons:
-  button1.tick();
-  button2.tick();
+  button1.isClick();
+  button2.isClick();
 
   // You can implement other code in here or just wait a while
   delay(10);

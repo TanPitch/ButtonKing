@@ -26,6 +26,7 @@ setDoubleClick	KEYWORD2
 setShortDoubleStart	KEYWORD2
 setLongDoubleStart	KEYWORD2
 setLongDoubleStop	KEYWORD2
+isClick	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)

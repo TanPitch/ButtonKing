@@ -109,12 +109,6 @@ void ButtonKing::setLongClickStop(callbackFunction newFunction)
   _setLongClickStop = newFunction;
 } // attachLongPressStop
 
-// save function for during longPress event
-void ButtonKing::setDuringLongClick(callbackFunction newFunction)
-{
-  _setDuringLongClick = newFunction;
-} // attachDuringLongPress
-
 // save function for DoubleShortPressStart event
 void ButtonKing::setShortDoubleStart(callbackFunction newFunction)
 {
@@ -133,18 +127,12 @@ void ButtonKing::setLongDoubleStop(callbackFunction newFunction)
   _setLongDoubleStop = newFunction;
 } // attachDoubleLongPressStop
 
-// save function for during Double longPress event
-void ButtonKing::setDuringDoubleLongClick(callbackFunction newFunction)
-{
-  _setDuringDoubleLongClick = newFunction;
-} // attachDuringDoubleLongPress
 
 
 void ButtonKing::reset(void){
   _state = 0; // restart.
   _Timer01 = 0;
   _Timer02 = 0;
-  _isLongPressed = false;
 }
 
 
@@ -152,10 +140,10 @@ void ButtonKing::reset(void){
  * @brief Check input of the configured pin and then advance the finite state
  * machine (FSM).
  */
-void ButtonKing::tick(void)
+void ButtonKing::isClick(void)
 {
   if (_pin >= 0) {
-    tick(digitalRead(_pin) == _buttonPressed);
+    isClick(digitalRead(_pin) == _buttonPressed);
   }
 }
 
@@ -163,7 +151,7 @@ void ButtonKing::tick(void)
 /**
  * @brief Advance the finite state machine (FSM) using the given level.
  */
-void ButtonKing::tick(bool activeLevel)
+void ButtonKing::isClick(bool activeLevel)
 {
   unsigned long now = millis(); // current (relative) time in msecs.
 
@@ -252,7 +240,7 @@ void ButtonKing::tick(bool activeLevel)
               // Start Double Short Press
               if (_setShortDoubleStart)
                 _setShortDoubleStart();
-              Timer01 = millis();
+              _Timer01 = now; // remember starting time
               _state = 7; // step to state 7
             } // if
           } // if
@@ -278,7 +266,8 @@ void ButtonKing::tick(bool activeLevel)
               _setLongDoubleStop();
             _state = 0; // return
           } // if
-} // ButtonKing.tick()
+  }
+} // ButtonKing.isClick()
 
 
 // end.
