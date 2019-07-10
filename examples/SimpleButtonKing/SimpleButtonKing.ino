@@ -45,7 +45,7 @@ void toDoubleClick() {
   static int k = LOW;
   // reverse the LED
   k = !k;
-  digitalWrite(13, m);
+  digitalWrite(13, k);
 } // toDoubleClick
 
 // End
