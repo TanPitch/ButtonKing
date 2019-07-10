@@ -12,8 +12,8 @@ This enables you to reuse the same button for multiple functions and lowers the 
 **lasted version release**
 
 ButtonKing 1.0.0 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.0.0))
- * all working test on ESP32
- * release without bug checking
+* all working (test on ESP32)
+* release without bug checking
 
 to install ButtonKing library
 [install instruction](https://github.com/TanPitch/ButtonKing/wiki/How-to-install-ButtonKing)
