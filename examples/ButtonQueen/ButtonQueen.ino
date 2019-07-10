@@ -7,8 +7,8 @@
  Copyright (c) by Tanyanat Pichitwong
 
  Setup a test circuit:
- * Connect a pushbutton to pin A1 (ButtonPin) and ground.
- * Connect a pushbutton to pin A2 (ButtonPin) and ground.
+ * Connect a pushbutton to pin 8 (ButtonPin) and ground.
+ * Connect a pushbutton to pin 9 (ButtonPin) and ground.
  * The Serial interface is used for output the detected button events.
 
 */
@@ -47,14 +47,18 @@ Button 2 DoubleLongPress stop
 
 #include "ButtonKing.h"
 
-// Setup a new ButtonKing on pin A1.
-ButtonKing button1(A1, true);
-// Setup a new ButtonKing on pin A2.
-ButtonKing button2(A2, true);
+// Setup a new ButtonKing on pin 8.
+ButtonKing button1(8, true);
+// Setup a new ButtonKing on pin 9.
+ButtonKing button2(9, true);
 
 
 // setup code here, run once:
 void setup() {
+ 
+  pinMode(8, INPUT);      // sets the digital pin as input
+  pinMode(9, INPUT);      // sets the digital pin as input
+ 
   // Setup the Serial port. see http://arduino.cc/en/Serial/IfSerial
   Serial.begin(9600);
   while (!Serial) {
