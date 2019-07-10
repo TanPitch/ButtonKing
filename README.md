@@ -15,7 +15,7 @@ ButtonKing 1.0.2 ([download here](https://github.com/TanPitch/ButtonKing/release
 * some minor improvement
 * example file bugs fixed
 * all worked : test on
-  * Aruino Zero, Leonardo, Uno, Mega, Due
+  * Arduino Zero, Leonardo, Uno, Mega, Due
   * ESP8266 and ESP32
   * STM32 based boards
 
