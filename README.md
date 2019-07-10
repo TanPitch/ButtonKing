@@ -31,3 +31,5 @@ to install ButtonKing library
 
 for more information
 [Button King wiki](https://github.com/TanPitch/ButtonKing/wiki)
+
+> If there is any problem, [please submit an issue on github](https://help.github.com/en/articles/creating-an-issue)
