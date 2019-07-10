@@ -1,7 +1,7 @@
 {
   "name": "ButtonKing",
   "keywords": "arduino, button, pushbutton",
-  "description": "This Arduino libary is improving the usage of a singe button for input. It shows how to use an digital input pin with a single pushbutton attached for detecting some of the typical button press events like single clicks, double clicks and long-time pressing. This enables you to reuse the same button for multiple functions and lowers the hardware invests.",
+  "description": "This library is improving the usage of a simple singe button. It takes a single pushbutton to do some of the typical button press events like single clicks, double clicks and long-time pressing. This will make your project less buttons and much more funtion inside it.",
   "repository":
   {
     "type": "git",
