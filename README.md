@@ -11,3 +11,8 @@ This enables you to reuse the same button for multiple functions and lowers the 
 
 for more information
 [Button King wiki](https://github.com/TanPitch/ButtonKing/wiki)
+
+CHECK LISTS
+
+- [ ] add TRIPPLE click
+- [ ] add number to click to
