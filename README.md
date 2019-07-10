@@ -9,10 +9,14 @@ It shows how to use an digital input pin with a single pushbutton attached
 for detecting some of the typical button press events like single clicks, double clicks and long-time pressing.
 This enables you to reuse the same button for multiple functions and lowers the hardware invests.
 
+**lasted version release**
+
+ButtonKing 1.0.0 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.0.0))
+ * all working test on ESP32
+ * release without bug checking
+
+to install ButtonKing library
+[install instruction](https://github.com/TanPitch/ButtonKing/wiki/How-to-install-ButtonKing)
+
 for more information
 [Button King wiki](https://github.com/TanPitch/ButtonKing/wiki)
-
-CHECK LISTS
-
-- [ ] add TRIPPLE click
-- [ ] add number to click to
