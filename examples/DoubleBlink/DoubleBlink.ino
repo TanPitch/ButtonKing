@@ -7,7 +7,7 @@
  Copyright (c) by Tanyanat Pichitwong
 
  Setup a test circuit:
- * Connect a pushbutton to pin A1 (ButtonPin) and ground.
+ * Connect a pushbutton to pin 8 (ButtonPin) and ground.
  * The pin 13 (StatusPin) is used for output
    - attach a led and resistor to ground
    - or see the built-in led.
