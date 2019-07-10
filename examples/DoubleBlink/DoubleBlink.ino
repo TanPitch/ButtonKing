@@ -29,7 +29,7 @@ typedef enum {
 ledActions;
 
 // Setup a new ButtonKing on pin A1.
-ButtonKing button(A1, true);
+ButtonKing button(8, true);
 
 ledActions nextAction = LED_OFF; // no action when starting
 
@@ -37,6 +37,8 @@ ledActions nextAction = LED_OFF; // no action when starting
 void setup() {
   // enable the standard led on pin 13.
   pinMode(13, OUTPUT);      // sets the digital pin as output
+ 
+  pinMode(8, INPUT);      // sets the digital pin as input
 
   // link the toClick function to be called on a click event.
   button.setClick(toClick);
