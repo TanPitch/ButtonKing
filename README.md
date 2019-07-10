@@ -10,10 +10,14 @@ This will make your project less buttons and much more funtion inside it.
 
 ### lasted version release
 
-ButtonKing 1.0.1 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.0.1))
+ButtonKing 1.0.2 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.0.2))
 
-* all working (test on ESP32)
-* some minor improvement and bugs fixed
+* some minor improvement
+* example file bugs fixed
+* all worked : test on
+  * Aruino Zero, Leonardo, Uno, Mega, Due
+  * ESP8266 and ESP32
+  * STM32 based boards
 
 to install ButtonKing library
 [install instruction](https://github.com/TanPitch/ButtonKing/wiki/How-to-install-ButtonKing)
