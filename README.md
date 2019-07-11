@@ -8,9 +8,12 @@ This library is improving the usage of a simple singe button.
 It takes a single pushbutton to do some of the typical button press events like single clicks, double clicks and long-time pressing.
 This will make your project less buttons and much more funtion inside it.
 
-### lastest beta version
+### lastest beta version 
+[![Build Status](https://travis-ci.org/TanPitch/ButtonKing.svg?branch=1.2.0)](https://travis-ci.org/TanPitch/ButtonKing)
 
 ButtonKing 1.2.0 beta ~~([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.2.0))~~
+
+
 * add **Triple click** action
 * add **interval time** counter
 * add new **Counting mode**
