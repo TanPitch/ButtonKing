@@ -11,8 +11,7 @@ This will make your project less buttons and much more funtion inside it.
 ### lastest beta version 
 [![Build Status](https://travis-ci.org/TanPitch/ButtonKing.svg?branch=1.2.0)](https://travis-ci.org/TanPitch/ButtonKing)
 
-ButtonKing 1.2.0 beta ~~([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.2.0))~~
-
+ButtonKing 1.2.0 beta ([download here](https://github.com/TanPitch/ButtonKing/tree/1.2.0))
 
 * add **Triple click** action
 * add **interval time** counter
