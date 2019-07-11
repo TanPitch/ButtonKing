@@ -17,6 +17,10 @@ setTimeDebounce	KEYWORD2
 setTimeShort	KEYWORD2
 setTimeLong	KEYWORD2
 setTimeDouble	KEYWORD2
+setTripleMode KEYWORD2
+setClickMode KEYWORD2
+setCountClickTimeout KEYWORD2
+setCountClickTo KEYWORD2
 
 setClick	KEYWORD2
 setShortClickStart	KEYWORD2
@@ -26,7 +30,14 @@ setDoubleClick	KEYWORD2
 setShortDoubleStart	KEYWORD2
 setLongDoubleStart	KEYWORD2
 setLongDoubleStop	KEYWORD2
+setTripleClick	KEYWORD2
+setShortTripleStart	KEYWORD2
+setLongTripleStart	KEYWORD2
+setLongTripleStop	KEYWORD2
+setCountClickComplete KEYWORD2
+setCountClickTimeout KEYWORD2
 isClick	KEYWORD2
+setPressedDuration KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
