@@ -8,7 +8,14 @@ This library is improving the usage of a simple singe button.
 It takes a single pushbutton to do some of the typical button press events like single clicks, double clicks and long-time pressing.
 This will make your project less buttons and much more funtion inside it.
 
-### lasted version release
+### lastest beta version
+
+ButtonKing 1.2.0 beta ~~([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.2.0))~~
+* add **Triple click** action
+* add **interval time** counter
+* add new **Counting mode**
+
+### lastest worked version
 
 ButtonKing 1.0.2 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.0.2))
 
@@ -26,8 +33,8 @@ to install ButtonKing library
 
 - [x] short/long period for button pressing.
 - [x] double click with button pressing.
-- [ ] tripple click
-- [ ] click for the specific times before run-out.
+- [ ] tripple. click (beta)
+- [ ] click for the specific times before time run-out. (beta)
 
 for more information
 [Button King wiki](https://github.com/TanPitch/ButtonKing/wiki)
