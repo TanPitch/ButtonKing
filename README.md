@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/TanPitch/ButtonKing.svg?branch=master)](https://travis-ci.org/TanPitch/ButtonKing)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/1cd1f2b79232424a98b6c1aa227dee7d)](https://app.codacy.com/app/TanPitch/ButtonKing?utm_source=github.com&utm_medium=referral&utm_content=TanPitch/ButtonKing&utm_campaign=Badge_Grade_Dashboard)
-[![Source Line of Code](https://img.shields.io/badge/Lines%20Of%20Code-380-brightgreen.svg)](https://github.com/TanPitch/ButtonKing)
+[![Source Line of Code](https://img.shields.io/badge/Lines%20Of%20Code-400-brightgreen.svg)](https://github.com/TanPitch/ButtonKing)
 
 This library is improving the usage of a simple singe button.
 It takes a single pushbutton to do some of the typical button press events like single clicks, double clicks and long-time pressing.
@@ -19,8 +19,10 @@ ButtonKing 1.2.0 beta ([download here](https://github.com/TanPitch/ButtonKing/tr
 
 ### lastest worked version
 
-ButtonKing 1.0.2 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.0.2))
+ButtonKing 1.2.0 ([download here](https://github.com/TanPitch/ButtonKing/releases/tag/1.2.0))
 
+* new algorithm
+* more stability
 * some minor improvement
 * example file bugs fixed
 * all worked : test on
@@ -35,7 +37,7 @@ to install ButtonKing library
 
 - [x] short/long period for button pressing.
 - [x] double click with button pressing.
-- [ ] tripple. click (beta)
+- [x] tripple click.
 - [ ] click for the specific times before time run-out. (beta)
 
 for more information
