@@ -14,19 +14,19 @@ callbackFunction	KEYWORD1
 #######################################
 
 setTimeDebounce	KEYWORD2
-setTimeShort	KEYWORD2
-setTimeLong	KEYWORD2
-setTimeDouble	KEYWORD2
+setTimeCount	KEYWORD2
 
 setClick	KEYWORD2
-setShortClickStart	KEYWORD2
-setLongClickStart	KEYWORD2
-setLongClickStop	KEYWORD2
+setPress	KEYWORD2
+setRelease	KEYWORD2
 setDoubleClick	KEYWORD2
-setShortDoubleStart	KEYWORD2
-setLongDoubleStart	KEYWORD2
-setLongDoubleStop	KEYWORD2
+setDoublePress	KEYWORD2
+setTripleClick	KEYWORD2
+setTriplePress	KEYWORD2
+
 isClick	KEYWORD2
+getPressedTimer	KEYWORD2
+reset	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)

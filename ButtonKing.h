@@ -6,6 +6,7 @@
 // -----
 // 08.07.2019 created by Tanyanat Pichitwong
 // 09.07.2019 transformed into a library
+// 23.02.2020 created new algorhythm
 // -----
 
 #ifndef ButtonKing_h
@@ -17,6 +18,7 @@
 
 extern "C" {
 typedef void (*callbackFunction)(void);
+typedef void (*parameterizedCallbackFunction)(void*);
 }
 
 
@@ -33,60 +35,81 @@ public:
   // set # millisec after safe click is assumed.
   void setTimeDebounce(int ticks);
 
-  // set # millisec after single short press is assumed.
-  void setTimeShort(int ticks);
-
-  // set # millisec after single long press is assumed.
-  void setTimeLong(int ticks);
-
-  // set # millisec after double press is assumed.
-  void setTimeDouble(int ticks);
+  // set # millisec to ending the button-tickings counter.
+  void setTimeCount(int ticks);
 
   // attach functions that will be called when button was pressed in the
   // specified way.
   void setClick(callbackFunction newFunction);
-  void setShortClickStart(callbackFunction newFunction);
-  void setLongClickStart(callbackFunction newFunction);
-  void setLongClickStop(callbackFunction newFunction);
+  void setClick(parameterizedCallbackFunction newFunction, void* parameter);
+  void setPress(callbackFunction newFunction);
+  void setPress(parameterizedCallbackFunction newFunction, void* parameter);
+  void setRelease(callbackFunction newFunction);
+  void setRelease(parameterizedCallbackFunction newFunction, void* parameter);
   void setDoubleClick(callbackFunction newFunction);
-  void setShortDoubleStart(callbackFunction newFunction);
-  void setLongDoubleStart(callbackFunction newFunction);
-  void setLongDoubleStop(callbackFunction newFunction);
+  void setDoubleClick(parameterizedCallbackFunction newFunction, void* parameter);
+  void setDoublePress(callbackFunction newFunction);
+  void setDoublePress(parameterizedCallbackFunction newFunction, void* parameter);
+  void setTripleClick(callbackFunction newFunction);
+  void setTripleClick(parameterizedCallbackFunction newFunction, void* parameter);
+  void setTriplePress(callbackFunction newFunction);
+  void setTriplePress(parameterizedCallbackFunction newFunction, void* parameter);
 
   void isClick(void);
-
   void isClick(bool level);
+  int getPressedTimer();           // using to get how long the button was pressed.
 
-  bool isLongPressed();
-  int getPressedTicks();
-  void reset(void);
+  void reset(void);                // using to reset the library
 
 private:
   int _pin; // hardware pin number.
-  unsigned int _debounceTime = 10; // number of ticks for debounce times.
-  unsigned int _shortTime = 500; // number of ticks that have to pass by
-                                // before a short press is detected.
-  unsigned int _longTime = 500; // number of ticks that have to pass by
-                                // before a long button press is detected
-  unsigned int _DoubleTime = 300; // number of ticks that have to pass by
-                                  // before a double press is detected
+  unsigned int _debounceTime = 10; // time to wait for debouncing.
+  unsigned int _waitTime = 500;    // time to close the counter that counts
+                                   // the button pressing.
 
-  int _buttonPressed;
+  bool _intButtonStage;            // intial stage of the button.
+  bool _newButtonStage;            // new or current stage of the button.
+
+  int _debounceState = 0;          // debounce function using machine stage.
+  int _buttonCount = 0;            // total button ticks.
+
+  bool _buttonFlag = false;        // to flag if callout function was run or not.
+
+  unsigned long _waitingTimer;     // current time to end all of the function.
+  unsigned long _debounceTimer;    // current time to end the debouncing.
+  unsigned long _pressedTimer;     // time that the button start pressing.
+  unsigned long _stopPressedTimer; // time that the button stop pressing.
 
   // These variables will hold functions acting as event source.
 
-  callbackFunction _setClick = NULL;
-  callbackFunction _setShortClickStart = NULL;
-  callbackFunction _setLongClickStart = NULL;
-  callbackFunction _setLongClickStop = NULL;
-  callbackFunction _setDoubleClick = NULL;
-  callbackFunction _setShortDoubleStart = NULL;
-  callbackFunction _setLongDoubleStart = NULL;
-  callbackFunction _setLongDoubleStop = NULL;
+  callbackFunction _ClickFunc = NULL;
+  parameterizedCallbackFunction _paramClickFunc = NULL;
+  void* _ClickFuncParam = NULL;
 
-  int _state = 0;
-  unsigned long _Timer01;
-  unsigned long _Timer02;
+  callbackFunction _PressFunc = NULL;
+  parameterizedCallbackFunction _paramPressFunc = NULL;
+  void* _PressFuncParam = NULL;
+
+  callbackFunction _ReleaseFunc = NULL;
+  parameterizedCallbackFunction _paramReleaseFunc = NULL;
+  void* _ReleaseFuncParam = NULL;
+
+  callbackFunction _DoubleClickFunc = NULL;
+  parameterizedCallbackFunction _paramDoubleClickFunc = NULL;
+  void* _DoubleClickFuncParam = NULL;
+
+  callbackFunction _DoublePressFunc = NULL;
+  parameterizedCallbackFunction _paramDoublePressFunc = NULL;
+  void* _DoublePressFuncParam = NULL;
+
+  callbackFunction _TripleClickFunc = NULL;
+  parameterizedCallbackFunction _paramTripleClickFunc = NULL;
+  void* _TripleClickFuncParam = NULL;
+
+  callbackFunction _TriplePressFunc = NULL;
+  parameterizedCallbackFunction _paramTriplePressFunc = NULL;
+  void* _TriplePressFuncParam = NULL;
+
 };
 
 #endif
