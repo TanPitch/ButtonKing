@@ -261,12 +261,12 @@ void ButtonKing::isClick(bool activeLevel)
     if(!activeLevel){
       _buttonFlag = false;
       _debounceState = 0;
+      _stopPressedTimer = millis();
       // Stop Pressing the button.
       if (_ReleaseFunc)
         _ReleaseFunc();
       if (_paramReleaseFunc)
         _paramReleaseFunc(_ReleaseFuncParam);
-      _stopPressedTimer = millis();
     }
   }
 } // ButtonKing
